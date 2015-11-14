@@ -14,3 +14,12 @@ done
 mv test.txt ~/A6L_ACCORD/data/ImageSets/
 cp *.jpg ~/A6L_ACCORD/data/Images/
 
+for file in train_pic/*.txt
+do
+  name=${file%.*}
+  ./generate_xml.py $name
+  rm -r $file
+  mv "$name.xml" ~/A6L_ACCORD/data/Annotations/.
+done
+
+

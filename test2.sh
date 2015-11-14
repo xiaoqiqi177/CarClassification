@@ -8,8 +8,8 @@ done
 mv test.txt ../ImageSets/.
 
 cd ~/fast-rcnn/selective_search/
-#matlab -nosplash -nodesktop < selective_search_test.m
-#mv test.mat ~/A6L_ACCORD/.
+matlab -nosplash -nodesktop < selective_search_test.m
+mv test.mat ~/A6L_ACCORD/.
 cd ../
 ./tools/test_net.py --gpu 0 --def models/VGG_CNN_M_1024/test.prototxt --net output/default/train/vgg_cnn_m_1024_fast_rcnn_iter_40000.caffemodel --imdb a6l_accord_test
 cd ~/end-to-end/
