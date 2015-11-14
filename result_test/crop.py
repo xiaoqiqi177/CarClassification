@@ -16,7 +16,7 @@ if __name__ == '__main__':
     alllines = fin.readlines()
     fin.close()
 
-    fout = open("record.txt","a");
+    fout = open("./result_record/record.txt","a");
     for eachline in alllines:
         arr = eachline.split()
         pic_file = arr[0]
@@ -25,7 +25,7 @@ if __name__ == '__main__':
             continue
         temp = pic_file
         im_file = pic_file+".jpg"
-        im = cv2.imread("./test_data/test_pic/"+im_file)
+        im = cv2.imread("../test_pic/"+im_file)
         a = float(arr[2])
         b = float(arr[3])
         c = float(arr[4])

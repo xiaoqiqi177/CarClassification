@@ -1,25 +1,16 @@
 #！/bin/bash
-cd ~/Desktop/test/
-i=0
-for file in *.jpg
-do
-  mv "$file" "test-$i.jpg"
-  i=$(($i+1))
-done
 
+#place pictures, selective_search for test pictures
+cd test_pic
 for file in *.jpg
 do
   echo ${file%.*} >> test.txt
+  cp $file ~/A6L_ACCORD/data/Images/.
 done
-mv test.txt ~/A6L_ACCORD/data/ImageSets/
-cp *.jpg ~/A6L_ACCORD/data/Images/
+mv test.txt ~/A6L_ACCORD/data/ImageSets/.
 
-for file in train_pic/*.txt
-do
-  name=${file%.*}
-  ./generate_xml.py $name
-  rm -r $file
-  mv "$name.xml" ~/A6L_ACCORD/data/Annotations/.
-done
-
+cd ~/fast-rcnn/selective_search/
+matlab -nosplash -nodesktop < selective_search_test.m
+mv test.mat ~/A6L_ACCORD/.
+cd ../
 
