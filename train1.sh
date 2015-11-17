@@ -11,7 +11,7 @@ done
 mv train.txt ~/A6L_ACCORD/data/ImageSets/
 cd ../
 
-for file in train_pic/*.jpg
+for file in train_pic/accord*.jpg
 do
   txt_file="${file%.*}.txt"
 
