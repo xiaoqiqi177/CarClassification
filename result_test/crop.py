@@ -15,6 +15,8 @@ if __name__ == '__main__':
     fin = open(points_file, "r")
     alllines = fin.readlines()
     fin.close()
+    
+    i=0
 
     fout = open("./result_record/record.txt","a");
     for eachline in alllines:
@@ -31,7 +33,8 @@ if __name__ == '__main__':
         c = float(arr[4])
         d = float(arr[5])
         crop_img = im[b:d, a:c]
-        cv2.imwrite("./result_pic/"+kind+"_"+str(weight)+".jpg",crop_img);
-        fout.write(kind+"_"+str(weight)+" "+pic_file+" "+kind+" "+str(weight)+"\n");
+        cv2.imwrite("./result_pic/"+kind+"_"+str(i)+".jpg",crop_img);
+        fout.write(kind+"_"+str(i)+" "+pic_file+" "+kind+" "+str(weight)+"\n")
+        i=i+1
    
     fout.close()
