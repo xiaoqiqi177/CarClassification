@@ -45,6 +45,8 @@ alllines = fin.readlines();
 fin.close()
 for eachline in alllines:
     arr = eachline.split()
+    #import IPython
+    #IPython.embed()
     a = min(int(arr[1]), int(arr[3]))
     b = max(int(arr[1]), int(arr[3]))
     c = min(int(arr[2]), int(arr[4]))

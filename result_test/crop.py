@@ -4,6 +4,12 @@ import matplotlib.pyplot as plt
 import os, sys, cv2
 
 
+def get_brand(file_name):
+    i = -1
+    while file_name[i].isdigit():
+        i -= 1
+    return file_name[:i+1]
+
 if __name__ == '__main__':
    
     points_file = sys.argv[1]
@@ -25,7 +31,6 @@ if __name__ == '__main__':
         weight = float(arr[1])
         if weight < 0.5:
             continue
-        temp = pic_file
         im_file = pic_file+".jpg"
         im = cv2.imread("../test_pic/"+im_file)
         a = float(arr[2])
@@ -33,8 +38,9 @@ if __name__ == '__main__':
         c = float(arr[4])
         d = float(arr[5])
         crop_img = im[b:d, a:c]
-        cv2.imwrite("./result_pic/"+kind+"_"+str(i)+".jpg",crop_img);
-        fout.write(kind+"_"+str(i)+" "+pic_file+" "+kind+" "+str(weight)+"\n")
+        brand = get_brand(pic_file)
+        cv2.imwrite("./result_pic/"+brand+"_"+kind+"_"+str(i)+".jpg",crop_img);
+        fout.write(brand+"_"+kind+"_"+str(i)+" "+pic_file+" "+kind+" "+str(weight)+"\n")
         i=i+1
-   
+    print i 
     fout.close()
