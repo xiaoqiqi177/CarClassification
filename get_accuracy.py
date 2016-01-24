@@ -6,7 +6,7 @@ import re
 
 cars = ['a6l', 'accord', 'corolla', 'byd', 'satana', 'faw', 'buick', 'cruze']
 
-fin = open('result2000.txt','r')
+fin = open('buick_result.txt','r')
 lines = fin.readlines()
 right_num = 0
 for i in range(len(lines)//6):

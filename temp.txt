@@ -1,0 +1,28 @@
+front
+---------- Prediction for /home/qqxiao/Desktop/e2e/result_test/result_pic/front_0.jpg ----------
+1.0000 - "COROLLA"
+0.0000 - "BYD"
+0.0000 - "BUICK"
+0.0000 - "ACCORD"
+0.0000 - "CRUZE"
+front
+---------- Prediction for /home/qqxiao/Desktop/e2e/result_test/result_pic/front_1.jpg ----------
+1.0000 - "COROLLA"
+0.0000 - "BYD"
+0.0000 - "BUICK"
+0.0000 - "CRUZE"
+0.0000 - "ACCORD"
+logo
+---------- Prediction for /home/qqxiao/Desktop/e2e/result_test/result_pic/logo_0.jpg ----------
+1.0000 - "COROLLA"
+0.0000 - "CRUZE"
+0.0000 - "ACCORD"
+0.0000 - "A6L"
+0.0000 - "FAW"
+whole
+---------- Prediction for /home/qqxiao/Desktop/e2e/result_test/result_pic/whole_0.jpg ----------
+1.0000 - "COROLLA"
+0.0000 - "ACCORD"
+0.0000 - "CRUZE"
+0.0000 - "BYD"
+0.0000 - "FAW"

@@ -24,7 +24,7 @@ if __name__ == '__main__':
         temp = pic_file
         im_file = pic_file+".jpg"
        
-        img = cv2.imread("pic_annotated/"+im_file)     
+        img = cv2.imread("../test_pic/"+im_file)     
         a = int(float(arr[2]))
         b = int(float(arr[3]))
         c = int(float(arr[4]))

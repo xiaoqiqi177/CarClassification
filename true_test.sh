@@ -7,7 +7,7 @@
 #cd ../e2e/
 
 cd result_test
-cp ~/Desktop/*.txt .
+cp ~/Desktop/NEW_DATA/results/test/*.txt .
 
 for file in *.txt
 do
